@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grader Dashboard — FDA Internal Use</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-badge">FDA</div>
+        <div class="brand-text">
+          <div class="brand-title">Grader Dashboard</div>
+          <div class="brand-subtitle">FDA Internal Use</div>
+        </div>
+      </div>
 
+      <nav class="nav">
+        <a href="#" class="nav-item active">
+          <span class="nav-icon">&#8962;</span> Home
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#9993;</span> Inbox
+          <span class="nav-badge">128</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#128203;</span> Submissions
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#128202;</span> Analytics
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#128196;</span> Reports
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#128101;</span> Sponsors
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#128276;</span> Alerts
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#9881;</span> Settings
+        </a>
+      </nav>
+
+      <div class="nav nav-bottom">
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#10067;</span> Help
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#8618;</span> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1>Welcome back, FDA Reviewer</h1>
+          <p>Here's what's happening with clinical trial results submissions.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="search-box">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" placeholder="Search trials, sponsors, NCT #..." />
+          </div>
+          <button class="icon-btn" aria-label="Notifications">
+            &#128276;
+            <span class="icon-badge">12</span>
+          </button>
+          <button class="icon-btn" aria-label="Help">&#10067;</button>
+          <div class="user-chip">
+            <span class="user-avatar">&#128100;</span>
+            <div class="user-info">
+              <div class="user-name">Reviewer</div>
+              <div class="user-role">FDA</div>
+            </div>
+            <span class="chevron">&#9662;</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <!-- Stat cards -->
+        <section class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-text">
+              <div class="stat-label">Submissions in Inbox</div>
+              <div class="stat-value">128</div>
+              <div class="stat-sub">Needs Review</div>
+            </div>
+            <div class="stat-icon icon-blue">&#9993;</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-text">
+              <div class="stat-label">High Risk Submissions</div>
+              <div class="stat-value">32</div>
+              <div class="stat-sub">Require Attention</div>
+            </div>
+            <div class="stat-icon icon-red">&#9873;</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-text">
+              <div class="stat-label">Overdue Trials</div>
+              <div class="stat-value">1,248</div>
+              <div class="stat-sub">Past Due Date</div>
+            </div>
+            <div class="stat-icon icon-orange">&#8986;</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-text">
+              <div class="stat-label">Compliance Rate (YTD)</div>
+              <div class="stat-value">70.4%</div>
+              <div class="stat-sub stat-up">&#9650; 5.6% vs last month</div>
+            </div>
+            <div class="stat-icon icon-green">&#128200;</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-text">
+              <div class="stat-label">Reports Published (YTD)</div>
+              <div class="stat-value">12,842</div>
+              <div class="stat-sub stat-up">&#9650; 8.2% vs last month</div>
+            </div>
+            <div class="stat-icon icon-purple">&#128209;</div>
+          </div>
+        </section>
+
+        <!-- Panels -->
+        <section class="panel-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Inbox Overview</h2>
+              <a href="#" class="view-all">View all</a>
+            </div>
+            <table class="inbox-table">
+              <thead>
+                <tr>
+                  <th>Priority</th>
+                  <th>Count</th>
+                  <th>Examples</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="dot dot-red"></span>High Risk</td>
+                  <td>32</td>
+                  <td>NCT04567890, NCT03812345, NCT05234567</td>
+                </tr>
+                <tr>
+                  <td><span class="dot dot-orange"></span>Medium Risk</td>
+                  <td>56</td>
+                  <td>NCT04987654, NCT04123456, NCT05321098</td>
+                </tr>
+                <tr>
+                  <td><span class="dot dot-green"></span>Low Risk</td>
+                  <td>40</td>
+                  <td>NCT04876543, NCT03987612, NCT05098765</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Submissions by Risk Level</h2>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut" style="--high:25; --medium:44; --low:31;">
+                <div class="donut-center">
+                  <div class="donut-total">128</div>
+                  <div class="donut-total-label">Total</div>
+                </div>
+              </div>
+              <ul class="legend">
+                <li><span class="dot dot-red"></span>High Risk <span class="legend-val">32 (25%)</span></li>
+                <li><span class="dot dot-orange"></span>Medium Risk <span class="legend-val">56 (44%)</span></li>
+                <li><span class="dot dot-green"></span>Low Risk <span class="legend-val">40 (31%)</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Recent Alerts</h2>
+              <a href="#" class="view-all">View all</a>
+            </div>
+            <ul class="alert-list">
+              <li class="alert-item">
+                <span class="alert-icon alert-warning">&#9888;</span>
+                <div class="alert-text">
+                  <div class="alert-title">High risk submission missing Primary Outcome</div>
+                  <div class="alert-meta">NCT04567890 &middot; Acme Pharma</div>
+                </div>
+                <div class="alert-time">10 min ago</div>
+              </li>
+              <li class="alert-item">
+                <span class="alert-icon alert-warning">&#9888;</span>
+                <div class="alert-text">
+                  <div class="alert-title">Overdue trial results</div>
+                  <div class="alert-meta">NCT03678901 &middot; BioHealth Corp</div>
+                </div>
+                <div class="alert-time">1 hr ago</div>
+              </li>
+              <li class="alert-item">
+                <span class="alert-icon alert-info">&#8505;</span>
+                <div class="alert-text">
+                  <div class="alert-title">New submission received</div>
+                  <div class="alert-meta">NCT05399887 &middot; MedInnovate Inc.</div>
+                </div>
+                <div class="alert-time">2 hr ago</div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        Grader Dashboard v1.0 &nbsp;|&nbsp; FDA Internal System &nbsp;|&nbsp; &#128274; Secure &middot; Protected &middot; Trusted
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
